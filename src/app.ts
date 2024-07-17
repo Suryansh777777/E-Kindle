@@ -5,7 +5,7 @@ import userRouter from "./user/userRouter";
 const app = express();
 app.use(express.json());
 //routes
-app.get("/", (req, res, next) => {
+app.get("/", (req, res) => {
     res.send("Hello World");
 });
 app.use("/api/users", userRouter);

@@ -56,7 +56,7 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
             { expiresIn: "7d", algorithm: "HS256" }
         );
         //response
-        return res.json({
+        return res.status(201).json({
             accessToken: token,
         });
     } catch (error) {
@@ -64,4 +64,5 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
-export { createUser };
+const loginUser = async (req: Request, res: Response, next: NextFunction) => {};
+export { createUser, loginUser };
